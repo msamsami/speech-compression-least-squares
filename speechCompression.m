@@ -20,7 +20,7 @@ plot (yq);
 sound(yq,Fs);
 pause(2.5);
 
-ly = length(y);  % length of the original signal matrix (y)
+ly = length(y);  % Length of the original signal matrix (y)
 for i = 1:16
     q=(max(y)-min(y))/i;
     yq=round(y/q)*q;
@@ -44,7 +44,7 @@ end
 
 %################
 % In this part we add 10 zeros at the first of the
-% matrix (y) and make a new matrix called (shY) :
+% matrix y and make a new matrix called shY :
 shY = [zeros(10,1); y];
 %################
 
@@ -61,7 +61,7 @@ end
 
 %################
 % In this part we arrange the equation Aa=y and solve it to
-% find a(k)'s and also e(n)'s :
+% find a(k)s and also e(n)s :
 AA = toeplitz(y1,y2); % A
 aa = AA\y160;        % a(k) coefficients
 error = y160-AA*aa;   % e(n) errors
